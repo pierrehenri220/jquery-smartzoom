@@ -1,0 +1,9 @@
+{
+  "packageManager": "github",
+  "name": "jquery-ap-smartzoom",
+  "repo": "allianceport/jquery-ap-smartzoom",
+  "files": {
+    "include": ["jquery.ap-smartzoom.js","jquery.ap-smartzoom.min.js"],
+    "exclude": ["bower.json","package.json","update.json","LICENSE","README.md","test.html"]
+  }
+}

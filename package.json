@@ -1,0 +1,20 @@
+{
+  "name": "jquery-ap-smartzoom",
+  "version": "0.0.1",
+  "description": "Scale your design on smartphone based on a specific width",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/allianceport/jquery-ap-smartzoom.git"
+  },
+  "author": "Alliance Port, LLC (http://www.allianceport.jp)",
+  "contributors": [
+		"Alliance Port, LLC (https://github.com/allianceportorg)",
+		"Pierre-Henri Lavigne (https://github.com/getphuture)"
+  ],
+  "licenses": [
+    {
+        "type": "MIT",
+        "url": "https://github.com/allianceport/jquery-ap_smartzoom/blob/master/LICENSE"
+    },
+  ],
+}
