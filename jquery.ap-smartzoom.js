@@ -33,7 +33,7 @@ window.ap.smartzoom = (function( $ ) {
             orientation = 'landscape';
             views.body.removeClass( 'ui-portrait' ).addClass( 'ui-landscape' );
         }
-        if ( currentZoom < 300 ) {
+        if ( currentZoom < 200 ) {
             document.documentElement.style.zoom = currentZoom + '%';
             document.documentElement.style.webkitTextSizeAdjust = '100%'; 
             document.body.style.fontSize = ( models.fontSize * currentZoom / 100 )+ "%";  

@@ -1,10 +1,10 @@
 # Smartzoom
-Scale your design on smartphone based on a specific width
+Scale your layout on smartphone based on a specific width
 
 ## Requirements
 
 Every jquery.ap-xxx plugin uses the window.ap global namespace. Avoid using or root overriding window.ap.  
-This plugin just scales your design by:
+This plugin just scales your layout by:
 
 1. Modifying the html document through the zoom property. To do so you need to be shure user won't mess it by disabling the scalability option. To achieve this, you can use this meta tag:
 
@@ -18,11 +18,16 @@ This plugin just scales your design by:
 body {
     font-size: 62.5%;
 }
+#wrap {
+    width: 320px;
+}
 h1 {
     margin: 0 16px 48px 16px;
     font-size: 2em; /* 20px */
 }
 ```
+
+The ui-landscape / ui-portrait classnames will also be automatically added to the body.
 
 ## Methods
 
@@ -38,13 +43,13 @@ See below for more options.
 
 ### Terminate
 
-If need be you can stop using:
+If need be you can stop it:
 
 ```
 ap.smartzoom.terminate();
 ```
 
-This will reset the document zoom property to 100% and the font size to its initial state
+This will reset the document zoom property to 100% and the font size to its initial state. All events handlers will also be destroyed.
 
 ## Initialize Options
 
@@ -59,7 +64,7 @@ ap.smartzoom.initialize({
 ```
 
 ### Percent fontSize
-The default based font size is 62.5. It means 1em = 10px.
+The default based font size is 62.5%. (It means 1em is 10px)
 To change it, just pass it as an argument like this:
 
 ```
