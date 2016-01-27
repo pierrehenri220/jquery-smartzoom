@@ -1,7 +1,7 @@
 {
   "description": "Scale your layout on smartphone based on a specific width",
   "name": "jquery-ap-smartzoom",
-  "main": "jquery-ap-smartzoom.js",
+  "main": "jquery.ap-smartzoom.js",
   "homepage": "https://github.com/allianceport/jquery-ap-smartzoom",
   "repository": {
     "type": "git",
