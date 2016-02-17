@@ -5,7 +5,7 @@
 \__ \ /| |\ | | | |  \   | | / /__| |_| | |_| | /| |\ |
 |___/_||_||_|_| |_|_|\_\ |_|/_____|\___/ \___/|_||_||_|
 
- Version: 0.1.2
+ Version: 0.2.0
   Author: Alliance Port, LLC
  Website: http://alliance.port.rocks/
     Docs: http://alliance.port.rocks/jquery-ap-smartzoom/
