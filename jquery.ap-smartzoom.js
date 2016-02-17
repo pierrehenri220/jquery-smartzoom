@@ -1,8 +1,24 @@
+/*
+
+ ___  _   _   ___  ____ _____ ___   ___   ___   _   _
+/ __|/ \_/ \ / _ \| |\_\_  __|  /  / _ \ / _ \ / \_/ \ 
+\__ \ /| |\ | | | |  \   | | / /__| |_| | |_| | /| |\ |
+|___/_||_||_|_| |_|_|\_\ |_|/_____|\___/ \___/|_||_||_|
+
+ Version: 0.1.2
+  Author: Alliance Port, LLC
+ Website: http://alliance.port.rocks/
+    Docs: http://alliance.port.rocks/jquery-ap-smartzoom/
+    Repo: http://github.com/allianceport/jquery-ap-smartzoom/
+  Issues: http://github.com/allianceport/jquery-ap-smartzoom/issues
+ */
+ 
 window.ap = window.ap || {};
 
+window.ap.smartzoom = (function( _w ) {
 
-window.ap.smartzoom = (function( $ ) {
-
+    var $     = _w.jQuery || _w.Zepto || _w.jquip
+      , myApp = _w.ap;
 
     var models      = {}
       , views       = {}
@@ -35,8 +51,10 @@ window.ap.smartzoom = (function( $ ) {
         }
         if ( currentZoom < 200 ) {
             document.documentElement.style.zoom = currentZoom + '%';
-            document.documentElement.style.webkitTextSizeAdjust = '100%'; 
-            document.body.style.fontSize = ( models.fontSize * currentZoom / 100 )+ "%";  
+            if ( myApp.isMobile.iOS() ) {
+                document.documentElement.style.webkitTextSizeAdjust = '100%';
+                document.body.style.fontSize = ( models.fontSize * currentZoom / 100 ) + "%";
+            }
         }
         return {
             width:       windowWidth  || 320
@@ -71,17 +89,19 @@ window.ap.smartzoom = (function( $ ) {
             views.body = $( 'body' );
             models.screen    = controllers.viewPort();
             // Deprecated: window.scrollTo( 0, 1 );
-            $( window ).bind( 'resize', controllers.resize );
+            $( _w ).bind( 'resize', controllers.resize );
             return models.screen;
         }
       , terminate:  function() {
-            $( window ).unbind( 'resize', controllers.resize );
+            $( _w ).unbind( 'resize', controllers.resize );
             document.documentElement.style.zoom = '100%';
-            document.documentElement.style.webkitTextSizeAdjust = 'auto'; 
-            document.body.style.fontSize = models.fontSize + "%"; 
+            if ( myApp.isMobile.iOS() ) {
+                document.documentElement.style.webkitTextSizeAdjust = 'auto'; 
+                document.body.style.fontSize = models.fontSize + "%";
+            }
             return models.screen;
       }
     };
 
 
-})( window.jQuery || window.Zepto || window.jquip );
+})( window );

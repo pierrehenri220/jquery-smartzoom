@@ -3,7 +3,8 @@ Scale your layout on smartphone based on a specific width
 
 ## Requirements
 
-Every jquery.ap-xxx plugin uses the window.ap global namespace. Avoid using or root overriding window.ap.  
+The [jquery-ap-core](https://github.com/allianceport/jquery-ap-core) is required.  
+Every jquery.ap-xxx plugin uses the window.ap global namespace. Please override in a careful way.  
 This plugin just scales your layout by:
 
 1. Modifying the html document through the zoom property. To do so you need to be shure user won't mess it by disabling the scalability option. To achieve this, you can use this meta tag:
