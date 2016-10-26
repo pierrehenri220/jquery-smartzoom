@@ -5,7 +5,7 @@
 |___/_||_||_|_| |_|_|\_\ |_|/_____|\___/ \___/|_||_||_|
 
 *//*
-  jQuery SmartZoom  v0.1.2
+  jQuery SmartZoom  v0.3.0
   @license: MIT
 */
 
