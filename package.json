@@ -4,17 +4,16 @@
   "description": "Scale your layout on smartphone based on a specific width",
   "repository": {
     "type": "git",
-    "url": "https://github.com/allianceport/jquery-ap-smartzoom.git"
+    "url": "https://github.com/getphuture/jquery-smartzoom.git"
   },
-  "author": "Alliance Port, LLC (http://www.allianceport.jp)",
+  "author": "Pierre-Henri Lavigne (http://www.pierre-henri-lavigne.info)",
   "contributors": [
-		"Alliance Port, LLC (https://github.com/allianceportorg)",
 		"Pierre-Henri Lavigne (https://github.com/getphuture)"
   ],
   "licenses": [
     {
         "type": "MIT",
-        "url": "https://github.com/allianceport/jquery-ap_smartzoom/blob/master/LICENSE"
+        "url": "https://github.com/allianceport/jquery-smartzoom/blob/master/LICENSE"
     },
   ],
 }

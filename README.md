@@ -3,17 +3,22 @@ Scale your layout on smartphone based on a specific width
 
 ## Requirements
 
-The [jquery-ap-core](https://github.com/allianceport/jquery-ap-core) is required.  
-Every jquery.ap-xxx plugin uses the window.ap global namespace. Please override in a careful way.  
+jQuery. Should work without Zepto or ender.js
+
 This plugin just scales your layout by:
 
-1. Modifying the html document through the zoom property. To do so you need to be shure user won't mess it by disabling the scalability option. To achieve this, you can use this meta tag:
+1. Modifying the html document through the zoom property. To do so you need
+to be shure user won't mess it by disabling the scalability option.  
+To achieve this, you can use this meta tag:
 
 ```
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 ```
 
-2. Adjusting the font size from the body to keep the ratio intact for the text elements. To achieve this you have to use relative units in your stylesheet for every text related properties. Em is recommended. For example:
+2. Adjusting the font size from the body to keep the ratio intact for the
+text elements.  
+To achieve this you have to use relative units in your stylesheet for every
+text related properties. Em is recommended. For example:
 
 ```
 body {
@@ -37,7 +42,7 @@ The ui-landscape / ui-portrait classnames will also be automatically added to th
 When the dom is ready, just trigger the function like this:
 
 ```
-ap.smartzoom.initialize();
+$.smartzoom.initialize();
 ```
 
 See below for more options.
@@ -47,7 +52,7 @@ See below for more options.
 If need be you can stop it:
 
 ```
-ap.smartzoom.terminate();
+$.smartzoom.terminate();
 ```
 
 This will reset the document zoom property to 100% and the font size to its initial state. All events handlers will also be destroyed.
